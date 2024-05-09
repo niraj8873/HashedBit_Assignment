@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #333333;
     color: #fff;
     padding: 10px;
     display: flex;
@@ -13,11 +13,11 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .social-links a {
-    color: #fff;
+    color: #ffffff;
     margin-left: 10px;
     text-decoration: none;
 }
