@@ -6,6 +6,8 @@ function foo() {
 }
 console.log( typeof foo() );      //output = string
 
+
+
 function foo() {
     return x;
     x = 1;
@@ -15,6 +17,8 @@ function foo() {
     var x = '2';                //Output:- function
 }
 console.log( typeof foo() ); 
+
+
 
 var x = 1;
 function foo() {

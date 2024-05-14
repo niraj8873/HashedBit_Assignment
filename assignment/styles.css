@@ -39,9 +39,10 @@ nav {
 
 .menu li a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; 
     padding: 10px;
 }
+
 
 .sidebar {
     background-color: #eee;
