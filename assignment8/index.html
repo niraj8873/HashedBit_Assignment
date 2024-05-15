@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>IPL SEASON 2022</title>
+</head>
+<body>
+  <h1 class="title">IPL Season 2022 Points</h1>
+  <table id="ipl-table">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Team</th>
+        <th>Matches</th>
+        <th>Won</th>
+        <th>Lost</th>
+        <th>Tied</th>
+        <th>NRR</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      
+    </tbody>
+  </table>
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const tableBody = document.getElementById("table-body");
+  
+    fetch('https://my-json-server.typicode.com/FreSauce/json-ipl/data')
+      .then(response => response.json())
+      .then(data => {
+        // Sort data based on NRR in ascending order
+        data.sort((a, b) => a.NRR - b.NRR);
+  
+        data.forEach((team, index) => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${team.Team}</td>
+            <td>${team.Matches}</td>
+            <td>${team.Won}</td>
+            <td>${team.Lost}</td>
+            <td>${team.Tied}</td>
+            <td>${team.NRR}</td>
+            <td>${team.Points}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  });
+  </script>
+</body>
+</html>

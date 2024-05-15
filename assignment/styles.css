@@ -5,67 +5,143 @@ body {
 }
 
 header {
-    background-color: #333333;
-    color: #fff;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
-}
-
-.logo {
-    font-size: 20px;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
 }
 
 .social-links a {
-    color: #ffffff;
     margin-left: 10px;
-    text-decoration: none;
 }
 
 nav {
     background-color: #444;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
-.menu {
-    list-style: none;
-    padding: 0;
+nav ul {
+    list-style-type: none;
     margin: 0;
+    padding: 0;
 }
 
-.menu li {
+nav ul li {
     display: inline;
+    margin-right: 20px;
 }
 
-.menu li a {
-    color: #fff;
-    text-decoration: none; 
-    padding: 10px;
-}
-
-
-.sidebar {
-    background-color: #eee;
-    padding: 10px;
-    width: 200px;
-    float: left;
-}
-
-.main {
-    float: left;
-    padding: 10px;
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
 .box {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+}
+
+.box h2 {
+    margin-top: 0;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
     background-color: #333;
-    color: #fff;
-    padding: 10px;
+    color: white;
     text-align: center;
+    padding: 20px;
 }
+
+/* Styles for the sidebar */
+aside {
+    background-color: #ddd;
+    width: 200px;
+    padding: 20px;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+/* Styles for the main content */
+.container {
+    display: flex;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.box h2 {
+    margin-top: 0;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles for header and footer */
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.social-links a {
+    margin-left: 10px;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
